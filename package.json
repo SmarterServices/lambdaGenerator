@@ -1,6 +1,6 @@
 {
   "name": "generator-lambda-publish",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "A generator for making files for a aws lambda worker and gulp task to deploy with versioning and alias functionality",
   "homepage": "",
   "author": {
@@ -44,7 +44,7 @@
       "mocha": true
     }
   },
-  "repository": "jpiepkow/generator-lambda-publish",
+  "repository": "SmarterServices/lambdaGenerator",
   "scripts": {
     "prepublish": "gulp prepublish",
     "test": "gulp"
