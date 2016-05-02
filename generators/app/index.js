@@ -50,8 +50,8 @@ module.exports = yeoman.generators.Base.extend({
         },
         type: 'input',
         name: 'version',
-        message: 'version to use with alias (current|$LATEST|[0-9])',
-        default: 'current' // Default to current folder name
+        message: 'version to use with alias, first time publishing needs to be set to $LATEST (current|$LATEST|[0-9])',
+        default: '$LATEST' // Default to current folder name
       },
       {
         when: function (res) {
