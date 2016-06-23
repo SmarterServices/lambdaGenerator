@@ -1,6 +1,6 @@
 {
   "name": "generator-lambda-publish",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "A generator for making files for a aws lambda worker and gulp task to deploy with versioning and alias functionality",
   "homepage": "",
   "author": {

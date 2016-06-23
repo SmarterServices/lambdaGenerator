@@ -26,6 +26,36 @@ module.exports = yeoman.generators.Base.extend({
       },
       {
         type: 'input',
+        name: 'gulp',
+        message: 'What do you want gulp to copy into dist folder?',
+        default: 'index.js' // Default to current folder name
+      },
+      {
+        type: 'input',
+        name: 'region',
+        message: 'What is the region for this lambda',
+        default: 'us-east-1' // Default to current folder name
+      },
+      {
+        type: 'input',
+        name: 'timeout',
+        message: 'What do you want for lambda timeout',
+        default: 60 // Default to current folder name
+      },
+      {
+        type: 'input',
+        name: 'memSize',
+        message: 'What do you want for lambda mem size',
+        default: 1536// Default to current folder name
+      },
+      {
+        type: 'input',
+        name: 'role',
+        message: 'What is your role arn for this lambda',
+        default: 'arn:aws:iam::594833901287:role/lambda_basic_execution' // Default to current folder name
+      },
+      {
+        type: 'input',
         name: 'profile',
         message: 'Your aws profile to publish your lambda',
         default: 'Profile-name' // Default to current folder name
@@ -123,9 +153,10 @@ module.exports = yeoman.generators.Base.extend({
         this.destinationPath('README.md'),
         this.props
       );
-      this.fs.copy(
+      this.fs.copyTpl(
         this.templatePath('_gulpfile.js'),
-        this.destinationPath('gulpfile.js')
+        this.destinationPath('gulpfile.js'),
+        this.props
       );
       this.fs.copy(
         this.templatePath('index.js'),

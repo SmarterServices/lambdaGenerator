@@ -15,7 +15,7 @@ gulp.task('clean', function(cb) {
 });
 
 gulp.task('js', function() {
-  return gulp.src('index.js')
+  return gulp.src('<%= gulp %>')
     .pipe(gulp.dest('dist/'));
 });
 

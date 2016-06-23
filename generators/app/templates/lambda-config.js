@@ -9,7 +9,7 @@ module.exports = {
     description:'<%= iotDescription %>'
   },
  <% } %>
-  region: 'lambda region',
+  region: '<%= region %>',
  <% if (alias) {%>
   alias: '<%= aliasName %>',
   aliasDescription: '<%= aliasDescription %>',
@@ -18,10 +18,10 @@ module.exports = {
   env: '<%= env %>',
   publish: true,//will add a new version of function every time published if true. i false it will replace $LATEST
   handler: 'index.handler',
-  role: 'arn:aws:iam::594833901287:role/lambda_basic_execution',
+  role: '<%= role %>',
   functionName: '<%= name %>',
-  timeout: 10,
-  memorySize: 128
+  timeout:<%= timeout %>,
+  memorySize: <%= memSize %>
 };
 
 
